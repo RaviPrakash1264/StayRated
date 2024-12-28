@@ -2,6 +2,9 @@ package com.lcwd.user.service.controllers;
 
 import com.lcwd.user.service.entities.User;
 import com.lcwd.user.service.services.UserService;
+import io.github.resilience4j.circuitbreaker.annotation.CircuitBreaker;
+import io.github.resilience4j.ratelimiter.annotation.RateLimiter;
+import io.github.resilience4j.retry.annotation.Retry;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -18,7 +21,7 @@ public class UserController {
     @Autowired
     private UserService userService;
 
-//    private Logger logger = LoggerFactory.getLogger(UserController.class);
+    private Logger logger = LoggerFactory.getLogger(UserController.class);
 
     //create
     @PostMapping
@@ -29,15 +32,15 @@ public class UserController {
 
     //single user get
 
-
+    int retryCount=1;
     @GetMapping("/{userId}")
 //    @CircuitBreaker(name = "ratingHotelBreaker", fallbackMethod = "ratingHotelFallback")
 //    @Retry(name = "ratingHotelService", fallbackMethod = "ratingHotelFallback")
-//    @RateLimiter(name = "userRateLimiter", fallbackMethod = "ratingHotelFallback")
+    @RateLimiter(name = "userRateLimiter", fallbackMethod = "ratingHotelFallback")
     public ResponseEntity<User> getSingleUser(@PathVariable String userId) {
-//        logger.info("Get Single User Handler: UserController");
-//        logger.info("Retry count: {}", retryCount);
-
+        logger.info("Get Single User Handler: UserController");
+        logger.info("Retry count: {}", retryCount);
+        retryCount++;
         User user = userService.getUser(userId);
         return ResponseEntity.ok(user);
     }
@@ -45,14 +48,14 @@ public class UserController {
     //creating fall back  method for circuitbreaker
 
 
-//    public ResponseEntity<User> ratingHotelFallback(String userId, Exception ex) {
-////        logger.info("Fallback is executed because service is down : ", ex.getMessage());
-//
-//        ex.printStackTrace();
-//
-//        User user = User.builder().email("dummy@gmail.com").name("Dummy").about("This user is created dummy because some service is down").userId("141234").build();
-//        return new ResponseEntity<>(user, HttpStatus.BAD_REQUEST);
-//    }
+    public ResponseEntity<User> ratingHotelFallback(String userId, Exception ex) {
+//        logger.info("Fallback is executed because service is down : ", ex.getMessage());
+
+        ex.printStackTrace();
+
+        User user = User.builder().email("dummy@gmail.com").name("Dummy").about("This user is created dummy because some service is down").userId("141234").build();
+        return new ResponseEntity<>(user, HttpStatus.BAD_REQUEST);
+    }
 
 
     //all user get
