@@ -14,8 +14,19 @@ Spring Cloud Config Server, allowing dynamic updates without restarting services
 </p>
 <h2 align="center">MICROSERVICES</h2>
 <p><strong>• UserService: </strong>Handles user-related operations, which includes
-userId,name,email,about,list of ratings given by him/her with hotelId,name,location
-and description about the hotel.</p>
+creation of user with name,email and description about the user.
+In addition to this it manages the list of ratings given by a particular user with hotelId,name,location
+and summary about the hotel.It also helps in giving
+the list of users along with their details</p>
+<p><strong>• HotelService: </strong>Handles hotel-related operations, which includes
+creation of hotel with name,location and summary about the hotel.
+It also manages the list of hotels and give details
+about a particular hotel as well.</p>
+<p><strong>• HotelService: </strong>Handles hotel-related operations, which includes
+creation of hotel with name,location and summary about the hotel.
+It also manages the list of hotels and give details
+about a particular hotel as well.</p>
+
 
 
 
