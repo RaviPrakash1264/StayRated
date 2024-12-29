@@ -44,18 +44,15 @@ Resilience4j, Okta</p>
 <h2 align="center">KEY FEATURES</h2>
 <p><strong>• Service Discovery: </strong>Implemented using <b>Eureka Server</b> for dynamic registration and
 discovery of microservices.</p>
-<p><strong>• HotelService: </strong>Handles hotel-related operations, which includes
-creation of hotel with name,location and summary about the hotel.
-It also manages the list of hotels and give details
-about a particular hotel as well.</p>
-<p><strong>• RatingService: </strong>Handles rating-related operations, which includes
-creation of ratings with userId,hotelId,rating out of 10 and 
-feedback about the particular hotel.It also lists down the
-the ratings based on userId and hotelId.</p>
-<p><strong>• ConfigServer: </strong>Provides centralized configuration
-management for all microservices.</p>
-<p><strong>• ApiGateway: </strong>Serves as the entry point for all
-client requests and handles routing.</p>
+<p><strong>• API Gateway: </strong>Centralized entry point with <b>Spring Cloud Gateway</b>,
+enabling routing, security, and rate limiting.</p>
+<p><strong>• Inter-Service Communication: </strong>Leveraged <b>Feign Client</b> for
+declarative REST client communication..</p>
+<p><strong>• Centralized Configuration: </strong>Managed using <b>Spring Cloud Config Server</b>,
+enabling externalized and dynamic configuration.</p>
+<p><strong>• Fault Tolerance: </strong></p>
+<p style="text-align: left;">• Integrated Resilience4j for circuit breaker patterns to handle service failures gracefully.</p>
+
 <h2 align="center">LAYERED ARCHITECTURE USED IN THE PROJECT</h2>
 <p align="center">
 <img src="https://i.ibb.co/fNLwL2y/Layered-Architecture.jpg" alt="Untitled" border="0">
