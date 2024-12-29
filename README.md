@@ -22,11 +22,14 @@ the list of users along with their details</p>
 creation of hotel with name,location and summary about the hotel.
 It also manages the list of hotels and give details
 about a particular hotel as well.</p>
-<p><strong>• HotelService: </strong>Handles hotel-related operations, which includes
-creation of hotel with name,location and summary about the hotel.
-It also manages the list of hotels and give details
-about a particular hotel as well.</p>
-
+<p><strong>• RatingService: </strong>Handles rating-related operations, which includes
+creation of ratings with userId,hotelId,rating out of 10 and 
+feedback about the particular hotel.It also lists down the
+the ratings based on userId and hotelId.</p>
+<p><strong>• ConfigServer: </strong>Provides centralized configuration
+management for all microservices.</p>
+<p><strong>• ApiGateway: </strong>Serves as the entry point for all
+client requests and handles routing.</p>
 
 
 
