@@ -13,7 +13,9 @@ Spring Cloud Config Server, allowing dynamic updates without restarting services
 <img src="https://i.ibb.co/BfMRqS2/DALL-E-2024-12-29-20-12-40-A-fun-and-cartoonish-logo-for-a-hotel-and-rating-management-system-The-de.webp" alt="Logo" height="200" width="200">
 </p>
 <h2 align="center">MICROSERVICES</h2>
-**• UserService:** Handles user-related operations, such as registration and profile management.
+<p><strong>• UserService: </strong>Handles user-related operations, which includes
+userId,name,email,about,list of ratings given by him/her with hotelId,name,location
+and description about the hotel.</p>
 
 
 
