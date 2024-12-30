@@ -50,8 +50,12 @@ enabling routing, security, and rate limiting.</p>
 declarative REST client communication..</p>
 <p><strong>• Centralized Configuration: </strong>Managed using <b>Spring Cloud Config Server</b>,
 enabling externalized and dynamic configuration.</p>
-<p><strong>• Fault Tolerance: </strong></p>
-<p style="text-align: left;">• Integrated Resilience4j for circuit breaker patterns to handle service failures gracefully.</p>
+<p><strong>• Fault Tolerance: </strong>Integrated <b>Resilience4j</b> for
+circuit breaker patterns to handle service failures gracefully.Applied rate limiting to ensure system
+stability under high traffic.</p>
+<p><strong>• Security: </strong>Secured using <b>Okta</b> for <b>OAuth 2.0</b> and
+<b>Spring Security</b> for role-based access control.</p>
+
 
 <h2 align="center">LAYERED ARCHITECTURE USED IN THE PROJECT</h2>
 <p align="center">
