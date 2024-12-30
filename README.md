@@ -59,7 +59,7 @@ stability under high traffic.</p>
 
 <h2 align="center">LAYERED ARCHITECTURE USED IN THE PROJECT</h2>
 <p align="center">
-<img src="https://i.ibb.co/fNLwL2y/Layered-Architecture.jpg" alt="Untitled" border="0">
+<img src="https://i.ibb.co/PgqXkjh/Screenshot-2024-12-30-212057.jpg" alt="Untitled" border="0">
 </p>
 <h2 align="center">ER Diagram</h2>
 <p align="center">
