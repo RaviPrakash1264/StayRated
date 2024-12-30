@@ -24,7 +24,7 @@ It also manages the list of hotels and give details
 about a particular hotel as well.</p>
 <p><strong>• RatingService: </strong>Handles rating-related operations, which includes
 creation of ratings with userId,hotelId,rating out of 10 and 
-feedback about the particular hotel.It also lists down the
+feedback about the particular hotel.It also lists down
 the ratings based on userId and hotelId.</p>
 <p><strong>• ConfigServer: </strong>Provides centralized configuration
 management for all microservices.</p>
